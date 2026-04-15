@@ -13,3 +13,8 @@
         width: 100%;
     }
 }
+
+.banner__footer-fundo img {
+    height: 400px;
+    width: 100vw;
+}
