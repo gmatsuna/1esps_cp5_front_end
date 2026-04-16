@@ -7,23 +7,40 @@
     <title>Pokemon</title>
 </head>
 <body>
-    <section class="banner">
-        <div class="banner__header">
-            <h2>CP 5</h2>
-            <div class="header--menu">
-                <a href="#">Início</a>
-                <a href="#">Integrantes</a>
-                <a href="#">Pokemons</a>
-                <a href="#">Cartas</a>
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo">CP 5</h2>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Integrantes</a></li>
+                <li><a href="#">Pokemons</a></li>
+                <li><a href="#">Cartas</a></li>
+            </ul>
+        </nav>
+        <section class="banner">
+            <img src="./assets/images/global/banner-left.png" alt="Parte esquerda do banner" class="layer layer-left">
+            <img src="./assets/images/global/banner-right.png" alt="Parte direita do banner" class="layer layer-right">
+            <div class="banner-content">
+                <div class="moldura-container">
+                    <img src="./assets/images/global/moldura.png" class="moldura-bg" alt="">
+                    <div class="moldura-text">
+                        <h1>Checkpoint <br> Project</h1>
+                    </div>
+                </div>
+                <button class="btn-start">Start</button>
             </div>
-        </div>
-        <div class="banner__title">
-            <h1>Checkpoint Project</h1>
-        </div>
-        <div class="banner__button">
-            <button>Start</button>
-        </div>
-    </section>
+            <div class="layer-bottom"></div>
+        </section>
+    </header>
+
+    <main>
+        <section class="characters">
+            
+        </section>
+        <section class="pokemons"></section>
+        <section class="cards"></section>
+    </main>
+
 
     <footer class="footer">
         <div class="banner__footer-fundo">

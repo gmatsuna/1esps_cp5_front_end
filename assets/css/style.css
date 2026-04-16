@@ -1,16 +1,134 @@
+.header {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: #fff;
+    border: 2px solid #000;
+    width: 100%;
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
+}
+
 .banner {
+    position: relative;
     background-image: linear-gradient(#27a3ff, #e4ffff);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 80vh;
+    min-height: 400px;
+    overflow: hidden;
 
-    .banner__header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .layer {
+        position: absolute;
+        bottom: 50px;
+        height: 70%;
+        object-fit: contain;
+        z-index: 1;
+    }
+
+    .layer-left {
+        left: 0;
+    }
+
+    .layer-right {
+        right: 0;
+    }
+
+
+    .layer-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
         width: 100%;
+        height: 50px;
+        background: url('../images/global/banner-bottom.png');
+        background-size: auto 100%;
+        z-index: 3;
+    }
+
+    .banner-content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        max-width: 420px;
+
+        .moldura-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: #fff; */
+            border-radius: 80px;
+            overflow: hidden;
+
+            .moldura-bg {
+                width: 100%;
+                display: block;
+                position: relative;
+                z-index: 2;
+            }
+
+            .moldura-text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                z-index: 3;
+                
+                h1 {
+                    font-size: clamp(1.2rem, 5vw, 2.5rem);
+                    margin: 0;
+                    color: #000;
+                    font-weight: 700;
+                }
+            }
+
+
+        }
+
+        .btn-start {
+            margin-top: 20px;
+            padding: 10px 50px;
+            font-size: 1.2rem;
+            background: #fff;
+            border: 3px solid #000;
+            cursor: pointer;
+            z-index: 11;
+            font-weight: bold;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 600px) {
+            .layer {
+                height: 40%;
+            }
+        }
     }
 }
 
