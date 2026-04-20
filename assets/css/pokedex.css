@@ -1,0 +1,100 @@
+.pokemon {
+    transition: all 0.3s ease;
+}
+
+
+.pokemon.disable {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    pointer-events: none;
+}
+
+.pokedex {
+    display: flex;
+    padding: 100px 50px;
+    background-color: #798DDA;
+    font-family: 'Press Start 2P';
+    gap: 100px;
+    align-items: flex-start;
+}
+
+.pokedex__sidebar {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.pokedex__title {
+    font-size: 1.8rem;
+    color: white;
+    margin: 0;
+    margin-left: 30px;
+}
+
+.pokedex__filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.filtro-item {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Press Start 2P';
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    transition: color 0.2s ease;
+}
+
+.filtro-item:hover {
+    color: #4A2E8E;
+}
+
+.filtro-item::before {
+    content: '►';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.filtro-item:hover::before {
+    opacity: 1;
+}
+
+.pokedex__lista {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 35px;
+    justify-content: start;
+    width: auto;
+    margin-left: 300px;
+}
+
+.pokemon {
+    transition: all 0.3s ease;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.pokemon img {
+    width: 120px;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.pokemon.disable {
+    display: none;
+}

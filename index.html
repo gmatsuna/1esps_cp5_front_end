@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/pokedex.css">
     <title>Pokemon</title>
 </head>
 <body>
@@ -49,7 +50,73 @@
                 </ul>
             </div>
         </section>
-        <section class="pokemons"></section>
+        <section id="pokemons" class="pokedex">
+            <div class="pokedex__sidebar">
+                <h2 class="pokedex__title">Descubra os <br> pokemons</h2>
+        
+                <div class="pokedex__filtro">
+                    <button class="filtro-item" data-tipo="todos">Todos</button>
+                    <button class="filtro-item" data-tipo="agua">Água</button>
+                    <button class="filtro-item" data-tipo="fogo">Fogo</button>
+                    <button class="filtro-item" data-tipo="planta">Planta</button>
+                    <button class="filtro-item" data-tipo="eletrico">Elétrico</button>
+                    <button class="filtro-item" data-tipo="gelo">Gelo</button>
+                </div>
+            </div>
+
+            <div class="pokedex__lista">
+                <div class="pokemon" data-tipo="fogo">
+                    <img src="./assets/images/pokemons/charmander.png" alt="Charmander">
+                </div>
+                <div class="pokemon" data-tipo="planta">
+                    <img src="./assets/images/pokemons/bulbasaur.png" alt="Bulbasaur">
+                </div>
+                <div class="pokemon" data-tipo="psiquico"> <img src="./assets/images/pokemons/abra.png" alt="Abra">
+                </div>
+                <div class="pokemon" data-tipo="agua">
+                    <img src="./assets/images/pokemons/squirtle.png" alt="Squirtle">
+                </div>
+
+                <div class="pokemon" data-tipo="normal">
+                    <img src="./assets/images/pokemons/clefairy.png" alt="Clefairy">
+                </div>
+                <div class="pokemon" data-tipo="fogo">
+                    <img src="./assets/images/pokemons/growlithe.png" alt="Growlithe">
+                </div>
+                <div class="pokemon" data-tipo="agua gelo">
+                    <img src="./assets/images/pokemons/goldeen.png" alt="Goldeen">
+                </div>
+                <div class="pokemon" data-tipo="normal">
+                    <img src="./assets/images/pokemons/snorlax.png" alt="Snorlax">
+                </div>
+
+                <div class="pokemon" data-tipo="planta">
+                    <img src="./assets/images/pokemons/caterpie.png" alt="Caterpie">
+                </div>
+                <div class="pokemon" data-tipo="fada">
+                    <img src="./assets/images/pokemons/jigglypuff.png" alt="Jigglypuff">
+                </div>
+                <div class="pokemon" data-tipo="agua gelo">
+                    <img src="./assets/images/pokemons/lapras.png" alt="Lapras">
+                </div>
+                <div class="pokemon" data-tipo="fogo">
+                    <img src="./assets/images/pokemons/ponyta.png" alt="Ponyta">
+                </div>
+
+                <div class="pokemon" data-tipo="normal">
+                    <img src="./assets/images/pokemons/eevee.png" alt="Eevee">
+                </div>
+                <div class="pokemon" data-tipo="agua">
+                    <img src="./assets/images/pokemons/krabby.png" alt="Krabby">
+                </div>
+                <div class="pokemon" data-tipo="normal">
+                    <img src="./assets/images/pokemons/Pidgey.png" alt="Pidgey">
+                </div>
+                <div class="pokemon" data-tipo="eletrico">
+                    <img src="./assets/images/pokemons/pikachu.png" alt="Pikachu">
+                </div>
+            </div>
+        </section>
         <section class="cards"></section>
     </main>
 
@@ -77,5 +144,6 @@
             </div>
         </div>
     </footer>
+    <script src="./main.js"></script>
 </body>
 </html>
