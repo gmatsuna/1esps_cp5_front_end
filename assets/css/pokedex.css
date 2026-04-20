@@ -30,13 +30,13 @@
     font-size: 1.8rem;
     color: white;
     margin: 0;
-    margin-left: 30px;
+    margin-left: 80px;
 }
 
 .pokedex__filtro {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 50px;
 }
 
@@ -55,6 +55,7 @@
     position: relative;
     padding-left: 30px;
     transition: color 0.2s ease;
+    width: 40%;
 }
 
 .filtro-item:hover {
@@ -72,7 +73,7 @@
     gap: 35px;
     justify-content: start;
     width: auto;
-    margin-left: 300px;
+    margin-left: 250px;
 }
 
 .pokemon {

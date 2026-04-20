@@ -21,7 +21,6 @@ filtros.forEach(botao => {
 
 pokemons.forEach(card => {
     card.addEventListener('click', () => {
-        // Preenche textos simples
         document.querySelector('#ficha-titulo').textContent = card.dataset.nome;
         document.querySelector('#ficha-altura').textContent = card.dataset.altura;
         document.querySelector('#ficha-peso').textContent = card.dataset.peso;
@@ -30,9 +29,29 @@ pokemons.forEach(card => {
         document.querySelector('#ficha-tipo').src = card.dataset.tipo_img;
         document.querySelector('#ficha-fraqueza').src = card.dataset.fraqueza;
 
+        const evolu2 = document.querySelector('#evolu2');
+        const evolu3 = document.querySelector('#evolu3');
+        const setas = document.querySelectorAll('.ficha-seta');
+
         document.querySelector('#evolu1').src = card.dataset.evolu1;
-        document.querySelector('#evolu2').src = card.dataset.evolu2;
-        document.querySelector('#evolu3').src = card.dataset.evolu3;
+
+        if (card.dataset.evolu2) {
+            evolu2.src = card.dataset.evolu2;
+            evolu2.classList.remove('ficha--hidden');
+            setas[0].classList.remove('ficha--hidden');
+        } else {
+            evolu2.classList.add('ficha--hidden');
+            setas[0].classList.add('ficha--hidden');
+        }
+
+        if (card.dataset.evolu3) {
+            evolu3.src = card.dataset.evolu3;
+            evolu3.classList.remove('ficha--hidden');
+            setas[1].classList.remove('ficha--hidden');
+        } else {
+            evolu3.classList.add('ficha--hidden');
+            setas[1].classList.add('ficha--hidden');
+        }
 
         fichaModal.classList.remove('ficha--hidden');
     });
@@ -69,6 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const imgPokemon = document.getElementById('display-img-pokemon-card');
         imgPokemon.src = `./assets/images/pokemons/${pokemon}.png`;
-        imgPokemon.style.display = 'block'; // Garante que apareça
+        imgPokemon.style.display = 'block';
     });
 });
