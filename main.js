@@ -42,9 +42,33 @@ fecharFicha.addEventListener('click', () => {
     fichaModal.classList.add('ficha--hidden');
 });
 
-// Fechar ao clicar no fundo escuro
 fichaModal.addEventListener('click', (event) => {
     if (event.target === fichaModal) {
         fichaModal.classList.add('ficha--hidden');
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const formCard = document.getElementById('form-card');
+
+    formCard.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome-card').value;
+        const vida = document.getElementById('vida-card').value;
+        const pokemon = document.getElementById('select-pokemon-card').value;
+        const ataque = document.getElementById('ataque-card').value;
+        const categoria = document.getElementById('select-categoria-card').value;
+        const resistencia = document.getElementById('resistencia-card').value;
+
+        document.getElementById('display-nome-card').textContent = nome;
+        document.getElementById('display-vida-card').textContent = vida ? `Vida: ${vida}` : '';
+        document.getElementById('display-ataque-card').textContent = ataque ? `Ataque: ${ataque}` : '';
+        document.getElementById('display-resistencia-card').textContent = resistencia ? `Resistência: ${resistencia}` : '';
+        document.getElementById('display-categoria-card').textContent = categoria ? `Categoria: ${categoria}` : '';
+
+        const imgPokemon = document.getElementById('display-img-pokemon-card');
+        imgPokemon.src = `./assets/images/pokemons/${pokemon}.png`;
+        imgPokemon.style.display = 'block'; // Garante que apareça
+    });
 });

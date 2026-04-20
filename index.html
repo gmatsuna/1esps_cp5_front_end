@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
     <link rel="stylesheet" href="./assets/css/ficha.css">
+    <link rel="stylesheet" href="./assets/css/card.css">
     <title>Pokemon</title>
 </head>
 <body>
@@ -329,7 +330,66 @@
                 </div>
             </div>
         </section>
-        <section class="cards"></section>
+        <section id="cards" class="cards">
+            <h2>Crie sua <br> própria carta <br> especial</h2>
+            <div class="container-card">
+                <form id="form-card">
+                    <label>Nome da carta: <input type="text" id="nome-card"></label>
+                    <label>Quantidade de vida: <input type="number" id="vida-card"></label>
+                    <label>Pokemon:
+                        <select id="select-pokemon-card">
+                            <option value="" disabled selected>Selecione o pokemon</option>
+                            <option value="bulbasaur">Bulbasaur</option>
+                            <option value="charmander">Charmander</option>
+                            <option value="pikachu">Pikachu</option>
+                            <option value="abra">Abra</option>
+                            <option value="squirtle">Squirtle</option>
+                            <option value="clefairy">Clefairy</option>
+                            <option value="growlithe">Growlithe</option>
+                            <option value="goldeen">Goldeen</option>
+                            <option value="snorlax">Snorlax</option>
+                            <option value="caterpie">Caterpie</option>
+                            <option value="jigglypuff">Jigglypuff</option>
+                            <option value="lapras">Lapras</option>
+                            <option value="ponyta">Ponyta</option>
+                            <option value="eevee">Eevee</option>
+                            <option value="pidgey">Pidgey</option>
+                            <option value="krabby">Krabby</option>
+                        </select>
+                    </label>
+                    <label>Ataque: <input type="number" id="ataque-card"></label>
+                    <label>Categoria:
+                        <select id="select-categoria-card">
+                            <option value="" disabled selected>Selecione a categoria</option>
+                            <option value="Planta">Planta</option>
+                            <option value="Fogo">Fogo</option>
+                            <option value="Elétrico">Elétrico</option>
+                            <option value="Água">Água</option>
+                            <option value="Gelo">Gelo</option>
+                            <option value="Normal">Normal</option>
+                        </select>
+                    </label>
+                    <label>Resistência: <input type="number" id="resistencia-card"></label>
+                    <button type="submit" id="btn-enviar-card">Enviar</button>
+                </form>
+
+                <div class="preview-card" id="card-area">
+                    <img src="./assets/images/global/card.png" alt="Carta base" class="imagem-fundo">
+                    
+                    <div class="card-conteudo">
+                        <h3 id="display-nome-card"></h3>
+                        <img id="display-img-pokemon-card" src="" alt="">
+                    </div>
+
+                    <div class="info-baixo-branca">
+                        <p id="display-vida-card"></p>
+                        <p id="display-ataque-card"></p>
+                        <p id="display-resistencia-card"></p>
+                        <p id="display-categoria-card"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
