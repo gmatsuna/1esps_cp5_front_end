@@ -40,6 +40,11 @@
     gap: 50px;
 }
 
+.seta_pokedex {
+    width: 25px;
+    visibility: hidden;
+}
+
 .filtro-item {
     background: transparent;
     border: none;
@@ -56,16 +61,8 @@
     color: #4A2E8E;
 }
 
-.filtro-item::before {
-    content: '►';
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.filtro-item:hover::before {
-    opacity: 1;
+.filtro-item:hover .seta_pokedex {
+    visibility: visible;
 }
 
 .pokedex__lista {

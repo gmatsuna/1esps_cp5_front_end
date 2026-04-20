@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/ficha.css">
     <title>Pokemon</title>
 </head>
 <body>
@@ -55,64 +56,275 @@
                 <h2 class="pokedex__title">Descubra os <br> pokemons</h2>
         
                 <div class="pokedex__filtro">
-                    <button class="filtro-item" data-tipo="todos">Todos</button>
-                    <button class="filtro-item" data-tipo="agua">Água</button>
-                    <button class="filtro-item" data-tipo="fogo">Fogo</button>
-                    <button class="filtro-item" data-tipo="planta">Planta</button>
-                    <button class="filtro-item" data-tipo="eletrico">Elétrico</button>
-                    <button class="filtro-item" data-tipo="gelo">Gelo</button>
+                    <button class="filtro-item" data-tipo="todos">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Todos
+                    </button>
+                    <button class="filtro-item" data-tipo="agua">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Água
+                    </button>
+                    <button class="filtro-item" data-tipo="fogo">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Fogo
+                    </button>
+                    <button class="filtro-item" data-tipo="planta">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Planta
+                    </button>
+                    <button class="filtro-item" data-tipo="eletrico">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Elétrico
+                    </button>
+                    <button class="filtro-item" data-tipo="gelo">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Gelo
+                    </button>
+                    <button class="filtro-item" data-tipo="normal">
+                        <img src="./assets/images/icons/seta-hover.png" class="seta_pokedex">
+                        Normal
+                    </button>
                 </div>
             </div>
 
             <div class="pokedex__lista">
-                <div class="pokemon" data-tipo="fogo">
-                    <img src="./assets/images/pokemons/charmander.png" alt="Charmander">
-                </div>
-                <div class="pokemon" data-tipo="planta">
+                <div class="pokemon"
+                    data-tipo="planta"
+                    data-nome="Bulbasaur" 
+                    data-altura="0.7 m" 
+                    data-peso="6.9 kg" 
+                    data-categoria="Seed"
+                    data-habilidades="Overgrow"
+                    data-tipo_img="./assets/images/icons/planta.png"
+                    data-fraqueza="./assets/images/icons/fogo.png"
+                    data-evolu1="./assets/images/pokemons/bulbasaur.png"
+                    data-evolu2="./assets/images/pokemons/bulbasaur-ev2.png"
+                    data-evolu3="./assets/images/pokemons/bulbasaur-ev3.png">
                     <img src="./assets/images/pokemons/bulbasaur.png" alt="Bulbasaur">
                 </div>
-                <div class="pokemon" data-tipo="psiquico"> <img src="./assets/images/pokemons/abra.png" alt="Abra">
+                <div class="pokemon" 
+                    data-tipo="fogo"
+                    data-nome="Charmander" 
+                    data-altura="0.6 m" 
+                    data-peso="8.5 kg" 
+                    data-categoria="Lizard"
+                    data-habilidades="Blaze"
+                    data-tipo_img="./assets/images/icons/fogo.png"
+                    data-fraqueza="./assets/images/icons/agua.png"
+                    data-evolu1="./assets/images/pokemons/charmander.png"
+                    data-evolu2="./assets/images/pokemons/charmander-ev2.png"
+                    data-evolu3="./assets/images/pokemons/charmander-ev3.png">
+                    <img src="./assets/images/pokemons/charmander.png" alt="Charmander">
                 </div>
-                <div class="pokemon" data-tipo="agua">
+                
+                <div class="pokemon" 
+                    data-nome="Abra"
+                    data-tipo="psiquico"
+                    data-altura="0.9 m" 
+                    data-peso="19.5 kg" 
+                    data-categoria="Psi"
+                    data-habilidades="Synchronize"
+                    data-tipo_img="./assets/images/icons/psiquico.png"
+                    data-fraqueza="./assets/images/icons/inseto.png"
+                    data-evolu1="./assets/images/pokemons/abra.png"
+                    data-evolu2="./assets/images/pokemons/abra-ev2.png"
+                    data-evolu3="./assets/images/pokemons/abra-ev3.png">
+                    <img src="./assets/images/pokemons/abra.png" alt="Abra">
+                </div>
+
+                <div class="pokemon" 
+                    data-nome="Squirtle"
+                    data-tipo="agua"
+                    data-altura="0.5 m" 
+                    data-peso="9.0 kg" 
+                    data-categoria="Tiny Turtle"
+                    data-habilidades="Torrent"
+                    data-tipo_img="./assets/images/icons/agua.png"
+                    data-fraqueza="./assets/images/icons/eletrico.png"
+                    data-evolu1="./assets/images/pokemons/squirtle.png"
+                    data-evolu2="./assets/images/pokemons/squirtle-ev2.png"
+                    data-evolu3="./assets/images/pokemons/squirtle-ev3.png">
                     <img src="./assets/images/pokemons/squirtle.png" alt="Squirtle">
                 </div>
 
-                <div class="pokemon" data-tipo="normal">
+                <div class="pokemon" 
+                    data-nome="Clefairy"
+                    data-tipo="normal" 
+                    data-altura="0.6 m" 
+                    data-peso="7.5 kg" 
+                    data-categoria="Fairy"
+                    data-habilidades="Cute Charm"
+                    data-tipo_img="./assets/images/icons/normal.png"
+                    data-fraqueza="./assets/images/icons/veneno.png"
+                    data-evolu1="./assets/images/pokemons/clefairy.png"
+                    data-evolu2="./assets/images/pokemons/clefairy-ev2.png"
+                    data-evolu3="./assets/images/pokemons/clefairy-ev3.png">
                     <img src="./assets/images/pokemons/clefairy.png" alt="Clefairy">
                 </div>
-                <div class="pokemon" data-tipo="fogo">
+
+                <div class="pokemon" 
+                    data-tipo="fogo"
+                    data-nome="Growlithe" 
+                    data-altura="0.7 m" 
+                    data-peso="19.0 kg" 
+                    data-categoria="Puppy"
+                    data-habilidades="Intimidate"
+                    data-tipo_img="./assets/images/icons/fogo.png"
+                    data-fraqueza="./assets/images/icons/agua.png"
+                    data-evolu1="./assets/images/pokemons/growlithe.png"
+                    data-evolu2="./assets/images/pokemons/growlithe-ev2.png"
+                    data-evolu3="./assets/images/pokemons/growlithe-ev3.png">
                     <img src="./assets/images/pokemons/growlithe.png" alt="Growlithe">
                 </div>
-                <div class="pokemon" data-tipo="agua gelo">
+
+                <div class="pokemon" 
+                    data-tipo="agua"
+                    data-nome="Goldeen" 
+                    data-altura="0.6 m" 
+                    data-peso="15.0 kg" 
+                    data-categoria="Goldfish"
+                    data-habilidades="Swift Swim"
+                    data-tipo_img="./assets/images/icons/agua.png"
+                    data-fraqueza="./assets/images/icons/eletrico.png"
+                    data-evolu1="./assets/images/pokemons/goldeen.png"
+                    data-evolu2="./assets/images/pokemons/goldeen-ev2.png"
+                    data-evolu3="./assets/images/pokemons/goldeen-ev3.png">
                     <img src="./assets/images/pokemons/goldeen.png" alt="Goldeen">
                 </div>
-                <div class="pokemon" data-tipo="normal">
+
+                <div class="pokemon" 
+                    data-tipo="normal"
+                    data-nome="Snorlax" 
+                    data-altura="2.1 m" 
+                    data-peso="460.0 kg" 
+                    data-categoria="Sleeping"
+                    data-habilidades="Immunity"
+                    data-tipo_img="./assets/images/icons/normal.png"
+                    data-fraqueza="./assets/images/icons/lutador.png"
+                    data-evolu1="./assets/images/pokemons/snorlax.png"
+                    data-evolu2="./assets/images/pokemons/snorlax-ev2.png"
+                    data-evolu3="./assets/images/pokemons/snorlax-ev3.png">
                     <img src="./assets/images/pokemons/snorlax.png" alt="Snorlax">
                 </div>
 
-                <div class="pokemon" data-tipo="planta">
+                <div class="pokemon" 
+                    data-tipo="planta"
+                    data-nome="Caterpie" 
+                    data-altura="0.3 m" 
+                    data-peso="2.9 kg" 
+                    data-categoria="Worm"
+                    data-habilidades="Shield Dust"
+                    data-tipo_img="./assets/images/icons/planta.png"
+                    data-fraqueza="./assets/images/icons/fogo.png"
+                    data-evolu1="./assets/images/pokemons/caterpie.png"
+                    data-evolu2="./assets/images/pokemons/caterpie-ev2.png"
+                    data-evolu3="./assets/images/pokemons/caterpie-ev3.png">
                     <img src="./assets/images/pokemons/caterpie.png" alt="Caterpie">
                 </div>
-                <div class="pokemon" data-tipo="fada">
+
+                <div class="pokemon" 
+                    data-tipo="normal"
+                    data-nome="Jigglypuff" 
+                    data-altura="0.5 m" 
+                    data-peso="5.5 kg" 
+                    data-categoria="Balloon"
+                    data-habilidades="Competitive"
+                    data-tipo_img="./assets/images/icons/normal.png"
+                    data-fraqueza="./assets/images/icons/lutador.png"
+                    data-evolu1="./assets/images/pokemons/jigglypuff.png"
+                    data-evolu2="./assets/images/pokemons/jigglypuff-ev2.png"
+                    data-evolu3="./assets/images/pokemons/jigglypuff-ev3.png">
                     <img src="./assets/images/pokemons/jigglypuff.png" alt="Jigglypuff">
                 </div>
-                <div class="pokemon" data-tipo="agua gelo">
+
+                <div class="pokemon"
+                    data-tipo="gelo"
+                    data-nome="Lapras" 
+                    data-altura="2.5 m" 
+                    data-peso="220.0 kg" 
+                    data-categoria="Transport"
+                    data-habilidades="Shell Armor"
+                    data-tipo_img="./assets/images/icons/gelo.png"
+                    data-fraqueza="./assets/images/icons/eletrico.png"
+                    data-evolu1="./assets/images/pokemons/lapras.png"
+                    data-evolu2="./assets/images/pokemons/lapras-ev2.png"
+                    data-evolu3="./assets/images/pokemons/lapras-ev3.png">
                     <img src="./assets/images/pokemons/lapras.png" alt="Lapras">
                 </div>
-                <div class="pokemon" data-tipo="fogo">
+
+                <div class="pokemon"
+                    data-tipo="fogo"
+                    data-nome="Ponyta" 
+                    data-altura="1.0 m" 
+                    data-peso="30.0 kg" 
+                    data-categoria="Fire Horse"
+                    data-habilidades="Run Away"
+                    data-tipo_img="./assets/images/icons/fogo.png"
+                    data-fraqueza="./assets/images/icons/agua.png"
+                    data-evolu1="./assets/images/pokemons/ponyta.png"
+                    data-evolu2="./assets/images/pokemons/ponyta-ev2.png"
+                    data-evolu3="./assets/images/pokemons/ponyta-ev3.png">
                     <img src="./assets/images/pokemons/ponyta.png" alt="Ponyta">
                 </div>
 
-                <div class="pokemon" data-tipo="normal">
+                <div class="pokemon"
+                    data-tipo="normal"
+                    data-nome="Eevee" 
+                    data-altura="0.3 m" 
+                    data-peso="6.5 kg" 
+                    data-categoria="Evolution"
+                    data-habilidades="Adaptability"
+                    data-tipo_img="./assets/images/icons/normal.png"
+                    data-fraqueza="./assets/images/icons/lutador.png"
+                    data-evolu1="./assets/images/pokemons/eevee.png"
+                    data-evolu2="./assets/images/pokemons/eevee-ev2.png"
+                    data-evolu3="./assets/images/pokemons/eevee-ev3.png">
                     <img src="./assets/images/pokemons/eevee.png" alt="Eevee">
                 </div>
-                <div class="pokemon" data-tipo="agua">
+
+                <div class="pokemon"
+                    data-tipo="agua"
+                    data-nome="Krabby" 
+                    data-altura="0.4 m" 
+                    data-peso="6.5 kg" 
+                    data-categoria="River Crab"
+                    data-habilidades="Hyper Cutter"
+                    data-tipo_img="./assets/images/icons/agua.png"
+                    data-fraqueza="./assets/images/icons/eletrico.png"
+                    data-evolu1="./assets/images/pokemons/krabby.png"
+                    data-evolu2="./assets/images/pokemons/krabby-ev2.png"
+                    data-evolu3="./assets/images/pokemons/krabby-ev3.png">
                     <img src="./assets/images/pokemons/krabby.png" alt="Krabby">
                 </div>
-                <div class="pokemon" data-tipo="normal">
-                    <img src="./assets/images/pokemons/Pidgey.png" alt="Pidgey">
+
+                <div class="pokemon" 
+                    data-tipo="normal"
+                    data-nome="Pidgey" 
+                    data-altura="0.3 m" 
+                    data-peso="1.8 kg" 
+                    data-categoria="Tiny Bird"
+                    data-habilidades="Keen Eye"
+                    data-tipo_img="./assets/images/icons/normal.png"
+                    data-fraqueza="./assets/images/icons/eletrico.png"
+                    data-evolu1="./assets/images/pokemons/pidgey.png"
+                    data-evolu2="./assets/images/pokemons/pidgey-ev2.png"
+                    data-evolu3="./assets/images/pokemons/pidgey-ev3.png">
+                    <img src="./assets/images/pokemons/pidgey.png" alt="Pidgey">
                 </div>
-                <div class="pokemon" data-tipo="eletrico">
+
+                <div class="pokemon"
+                    data-tipo="eletrico"
+                    data-nome="Pikachu" 
+                    data-altura="0.4 m" 
+                    data-peso="6.0 kg" 
+                    data-categoria="Mouse"
+                    data-habilidades="Static"
+                    data-tipo="eletrico"
+                    data-tipo_img="./assets/images/icons/eletrico.png"
+                    data-fraqueza="./assets/images/icons/terra.png"
+                    data-evolu1="./assets/images/pokemons/pikachu.png"
+                    data-evolu2="./assets/images/pokemons/pikachu-ev2.png"
+                    data-evolu3="./assets/images/pokemons/pikachu-ev3.png">
                     <img src="./assets/images/pokemons/pikachu.png" alt="Pikachu">
                 </div>
             </div>
@@ -144,6 +356,29 @@
             </div>
         </div>
     </footer>
+    <div div id="ficha-modal" class="ficha-container ficha--hidden">
+        <div class="ficha-conteudo">
+            <span class="ficha-fechar">X</span>
+            <h2 id="ficha-titulo"></h2>
+        
+            <div class="ficha-grid">
+                <p>Altura: <span id="ficha-altura"></span></p>
+                <p>Peso: <span id="ficha-peso"></span></p>
+                <p>Categoria: <span id="ficha-categoria"></span></p>
+                <p>Habilidades: <span id="ficha-habilidades"></span></p>
+                <p>Tipo: <img id="ficha-tipo" src="" class="icon-tipo"></p>
+                <p>Fraqueza: <img id="ficha-fraqueza" src="" class="icon-fraqueza"></p>
+            </div>
+
+            <div class="ficha-evolucoes">
+                <img id="evolu1" src="" alt="Evolução 1">
+                <img src="./assets/images/icons/seta.png" class="ficha-seta" alt="Seta">
+                <img id="evolu2" src="" alt="Evolução 2">
+                <img src="./assets/images/icons/seta.png" class="ficha-seta" alt="Seta">
+                <img id="evolu3" src="" alt="Evolução 3">
+            </div>
+        </div>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
