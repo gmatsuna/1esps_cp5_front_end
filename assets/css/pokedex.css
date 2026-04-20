@@ -1,13 +1,30 @@
 .pokemon {
     transition: all 0.3s ease;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
+.pokemon img {
+    width: 120px;
+    height: auto;
+    display: block;
+    image-rendering: pixelated;
+}
 
 .pokemon.disable {
     opacity: 0;
     transform: scale(0);
     position: absolute;
     pointer-events: none;
+    display: none;
+}
+
+.pokemon:hover {
+    cursor: pointer;
 }
 
 .pokedex {
@@ -34,10 +51,9 @@
 }
 
 .pokedex__filtro {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px 50px;
 }
 
 .seta_pokedex {
@@ -53,9 +69,10 @@
     font-size: 1.3rem;
     cursor: pointer;
     position: relative;
-    padding-left: 30px;
+    padding-left: 40px;
     transition: color 0.2s ease;
-    width: 40%;
+    text-align: left;
+    width: 100%;
 }
 
 .filtro-item:hover {
@@ -74,25 +91,4 @@
     justify-content: start;
     width: auto;
     margin-left: 250px;
-}
-
-.pokemon {
-    transition: all 0.3s ease;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-}
-
-.pokemon img {
-    width: 120px;
-    height: auto;
-    display: block;
-    image-rendering: pixelated;
-}
-
-.pokemon.disable {
-    display: none;
 }
