@@ -83,9 +83,9 @@ O estilo foi modularizado:
 
 Responsável por:
 
-* 🎯 Filtro de Pokémons por tipo (`data-tipo`)
+* 🎯 Filtro de Pokémons por tipo
 * 📂 Abertura da ficha (modal)
-* 🧠 Manipulação de atributos `data-*`
+* 🧠 Manipulação de atributos
 * 🃏 Criação dinâmica de cartas
 * 🔄 Atualização do preview em tempo real
 
@@ -96,7 +96,7 @@ Responsável por:
 ### 🔍 Pokédex Interativa
 
 * Filtro por tipo (água, fogo, planta, etc.)
-* Exibição dinâmica com base em atributos HTML (`data-*`)
+* Exibição dinâmica com base em atributos HTML
 
 ---
 
