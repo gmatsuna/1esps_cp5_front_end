@@ -5,38 +5,38 @@ const fecharFicha = document.querySelector('.ficha-fechar');
 
 filtros.forEach(botao => {
     botao.addEventListener('click', () => {
-        const tipoSelecionado = botao.dataset.tipo;
+        const tipoSelecionado = botao.getAttribute('tipo');
 
         pokemons.forEach(card => {
-            const tiposDoPokemon = card.dataset.tipo.split(' '); 
-
-            if (tipoSelecionado === 'todos' || tiposDoPokemon.includes(tipoSelecionado)) {
+            card.classList.remove('disable');
+            const tipoPokemon = card.getAttribute('tipo');
+            if (tipoSelecionado === 'todos' || tipoPokemon.includes(tipoSelecionado)) {
                 card.classList.remove('disable');
             } else {
                 card.classList.add('disable');
             }
         });
-    });
+    }); 
 });
 
 pokemons.forEach(card => {
     card.addEventListener('click', () => {
-        document.querySelector('#ficha-titulo').textContent = card.dataset.nome;
-        document.querySelector('#ficha-altura').textContent = card.dataset.altura;
-        document.querySelector('#ficha-peso').textContent = card.dataset.peso;
-        document.querySelector('#ficha-categoria').textContent = card.dataset.categoria;
-        document.querySelector('#ficha-habilidades').textContent = card.dataset.habilidades;
-        document.querySelector('#ficha-tipo').src = card.dataset.tipo_img;
-        document.querySelector('#ficha-fraqueza').src = card.dataset.fraqueza;
+        document.querySelector('#ficha-titulo').textContent = card.getAttribute('nome');
+        document.querySelector('#ficha-altura').textContent = card.getAttribute('altura');
+        document.querySelector('#ficha-peso').textContent = card.getAttribute('peso');
+        document.querySelector('#ficha-categoria').textContent = card.getAttribute('categoria');
+        document.querySelector('#ficha-habilidades').textContent = card.getAttribute('habilidades');
+        document.querySelector('#ficha-tipo').src = card.getAttribute('tipo_img');
+        document.querySelector('#ficha-fraqueza').src = card.getAttribute('fraqueza');
 
         const evolu2 = document.querySelector('#evolu2');
         const evolu3 = document.querySelector('#evolu3');
         const setas = document.querySelectorAll('.ficha-seta');
 
-        document.querySelector('#evolu1').src = card.dataset.evolu1;
+        document.querySelector('#evolu1').src = card.getAttribute('evolu1');
 
-        if (card.dataset.evolu2) {
-            evolu2.src = card.dataset.evolu2;
+        if (card.getAttribute('evolu2')) {
+            evolu2.src = card.getAttribute('evolu2');
             evolu2.classList.remove('ficha--hidden');
             setas[0].classList.remove('ficha--hidden');
         } else {
@@ -44,8 +44,8 @@ pokemons.forEach(card => {
             setas[0].classList.add('ficha--hidden');
         }
 
-        if (card.dataset.evolu3) {
-            evolu3.src = card.dataset.evolu3;
+        if (card.getAttribute('evolu3')) {
+            evolu3.src = card.getAttribute('evolu3');
             evolu3.classList.remove('ficha--hidden');
             setas[1].classList.remove('ficha--hidden');
         } else {
@@ -61,33 +61,33 @@ fecharFicha.addEventListener('click', () => {
     fichaModal.classList.add('ficha--hidden');
 });
 
-fichaModal.addEventListener('click', (event) => {
-    if (event.target === fichaModal) {
-        fichaModal.classList.add('ficha--hidden');
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-    const formCard = document.getElementById('form-card');
+    const nomeInput = document.querySelector('#nome-card');
+    const vidaInput = document.querySelector('#vida-card');
+    const pokemonSelect = document.querySelector('#select-pokemon-card');
+    const ataqueInput = document.querySelector('#ataque-card');
+    const categoriaSelect = document.querySelector('#select-categoria-card');
+    const resistenciaInput = document.querySelector('#resistencia-card');
+    
+    const btn = document.querySelector('#btn-enviar-card');
 
-    formCard.addEventListener('submit', (event) => {
+    const displayNome = document.querySelector('#display-nome-card');
+    const displayVida = document.querySelector('#display-vida-card');
+    const displayAtaque = document.querySelector('#display-ataque-card');
+    const displayResistencia = document.querySelector('#display-resistencia-card');
+    const displayCategoria = document.querySelector('#display-categoria-card');
+    const displayImg = document.querySelector('#display-img-pokemon-card');
+
+    btn.addEventListener('click', (event) => {
         event.preventDefault();
 
-        const nome = document.getElementById('nome-card').value;
-        const vida = document.getElementById('vida-card').value;
-        const pokemon = document.getElementById('select-pokemon-card').value;
-        const ataque = document.getElementById('ataque-card').value;
-        const categoria = document.getElementById('select-categoria-card').value;
-        const resistencia = document.getElementById('resistencia-card').value;
-
-        document.getElementById('display-nome-card').textContent = nome;
-        document.getElementById('display-vida-card').textContent = vida ? `Vida: ${vida}` : '';
-        document.getElementById('display-ataque-card').textContent = ataque ? `Ataque: ${ataque}` : '';
-        document.getElementById('display-resistencia-card').textContent = resistencia ? `Resistência: ${resistencia}` : '';
-        document.getElementById('display-categoria-card').textContent = categoria ? `Categoria: ${categoria}` : '';
-
-        const imgPokemon = document.getElementById('display-img-pokemon-card');
-        imgPokemon.src = `./assets/images/pokemons/${pokemon}.png`;
-        imgPokemon.style.display = 'block';
+        displayNome.innerHTML = nomeInput.value;
+        displayVida.innerHTML = vidaInput.value ? `Vida: ${vidaInput.value}` : '';
+        displayAtaque.innerHTML = ataqueInput.value ? `Ataque: ${ataqueInput.value}` : '';
+        displayResistencia.innerHTML = resistenciaInput.value ? `Resistência: ${resistenciaInput.value}` : '';
+        displayCategoria.innerHTML = categoriaSelect.value ? `Categoria: ${categoriaSelect.value}` : '';
+        
+        displayImg.src = `./assets/images/pokemons/${pokemonSelect.value}.png`;
+        displayImg.style.display = 'block';
     });
 });
